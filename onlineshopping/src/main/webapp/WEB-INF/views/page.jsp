@@ -45,8 +45,8 @@
 	<div class="wrapper">
 		<!-- Navigation -->
 		<%@include file="./shared/navbar.jsp"%>
-		
-		
+
+
 		<div class=content">
 			<!-- Page Content -->
 
@@ -62,10 +62,15 @@
 				<%@include file="contact.jsp"%>
 			</c:if>
 
+			<c:if
+				test="${userClickAllProducts == true or userClickCategoryProducts== true }">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
+
 			<!-- Footer -->
 			<%@include file="./shared/footer.jsp"%>
 		</div>
-		
+
 		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/jquery.js"></script>
 		<script src="${js}/bootstrap.bundle.min.js"></script>
